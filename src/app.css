@@ -27,7 +27,7 @@ body {
 
 .box {
   width: 999px;
-  height: 580px;
+  /* height: 580px; */
   min-height: 580px;
   background-color: white;
   display: flex;
@@ -278,7 +278,7 @@ body {
 }
 
 .login-input-phone:focus {
-  border-color: rgba(254, 115, 0, 0.5) !important;
+  border-color: #fe730080 !important;
   box-shadow: none !important;
 }
 
@@ -302,15 +302,124 @@ body {
   display: inline-block;
 }
 
-.footer{
+.footer {
   margin-top: 30px;
   display: flex;
   /* background-color: pink; */
 }
 
-.footer a{
+.footer a {
   text-decoration: none;
   color: #868c9d;
   display: inline-block;
   margin: 0 10px;
+}
+
+.not-found {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.not-found-img {
+  display: block;
+  width: 600px;
+  height: 420px;
+}
+
+.signup-container {
+  width: 75%;
+  height: calc(100% - 120px);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.signup-header {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: pink; */
+  align-items: center;
+}
+
+.has-account{
+  margin-bottom: 0px;
+  display: inline-block;
+  color: #40485b;
+}
+
+.signup-body {
+}
+
+.sign-footer {
+}
+
+.login-title,
+.signup-title {
+  display: inline-block;
+  color: #40485b;
+  font-size: 1.714rem;
+  font-weight: bold;
+}
+
+.link {
+  color: #005980;
+  text-decoration: none;
+}
+
+.signup-input-name,
+.signup-input-phone,
+.signup-input-password {
+  width: 100% !important;
+}
+
+.signup-input-name,
+.signup-input-phone,
+.signup-input-password,
+.signup-input-location,
+.signup-input-static {
+  padding-top: 0.64286em;
+  padding-bottom: 0.64286em;
+  line-height: 1.42858rem;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+
+:where(.css-dev-only-do-not-override-1vr7spz).ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: rgb(181, 181, 181);
+  z-index: 1;
+}
+
+:where(.css-dev-only-do-not-override-1vr7spz).ant-input-affix-wrapper:focus, :where(.css-dev-only-do-not-override-1vr7spz).ant-input-affix-wrapper-focused {
+  border-color: #fe730080 !important;
+  box-shadow: none !important;
+  outline: 0;
+}
+
+.signup-input-location {
+  width: 55%;
+  border-radius: 0 3px 3px 0;
+}
+
+.signup-input-static{
+  width: 45%;
+  color: gray;
+  border-radius: 3px 0 0 3px;
+  background-color: #f9f9f9;
+}
+
+.signup-btn {
+  width: 100%;
+  background-color: #fe7300;
+  height: 38px;
+  border-radius: 2px;
+}
+
+.signup-btn:hover {
+  background-color: #f38d30 !important;
 }

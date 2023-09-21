@@ -2,7 +2,7 @@ import React from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input } from "antd";
 
-export const MyForm:React.FC = () => {
+export const LoginForm:React.FC = () => {
     const onFinish = (values: any) => {
       console.log("Received values of form: ", values);
     };
@@ -16,7 +16,7 @@ export const MyForm:React.FC = () => {
       >
         <Form.Item
           name="username"
-          rules={[{ required: true, message: "Please input your Username!" }]}
+          rules={[{ required: true, message: "用户名为必填项" }]}
         >
           <Input className="login-input-phone"
             placeholder="手机 / 邮箱 / 个人空间地址"
@@ -24,7 +24,7 @@ export const MyForm:React.FC = () => {
         </Form.Item>
         <Form.Item
           name="password"
-          rules={[{ required: true, message: "Please input your Password!" }]}
+          rules={[{ required: true, message: "" }]}
         >
           <Input
           className="login-input-password"
@@ -37,7 +37,7 @@ export const MyForm:React.FC = () => {
           <Form.Item name="remember" valuePropName="checked" noStyle>
             <Checkbox>记住我</Checkbox>
           </Form.Item>
-          <a  className="login-message" href="">
+          <a  className="login-message link" href="">
             短信验证登陆
           </a>
           </div>

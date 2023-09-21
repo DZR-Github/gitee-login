@@ -6,10 +6,16 @@ import { SignUp } from "./components/SignUp";
 import { BrowserRouter, Routes, Route, NavLink, Outlet } from "react-router-dom";
 import { ViewRouter } from "./router/ViewRouter";
 
-const App = () => {
+const Main = () => {
   return (
-    <ViewRouter />
+    <div className="main">
+      <div className="box">
+        <LeftCard />
+        <Outlet />
+      </div>
+      <Footer />
+    </div>
   );
 };
 
-export default App;
+export default Main;

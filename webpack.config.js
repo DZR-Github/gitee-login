@@ -19,6 +19,7 @@ module.exports = {
   },
   devServer: {
     port: 3030, // you can change the port
+    historyApiFallback: true,  //使用路由后刷新页面仍然保持不变
   },
   module: {
     rules: [
@@ -31,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.(c)ss$/, // styles files
-        use: ["style-loader", "css-loader",],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
@@ -48,16 +49,13 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/, // 匹配.ts, tsx文件
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             // 预设执行顺序由右往左,所以先处理ts,再处理jsx
-            presets: [
-              '@babel/preset-react',
-              '@babel/preset-typescript'
-            ]
-          }
-        }
-      }
+            presets: ["@babel/preset-react", "@babel/preset-typescript"],
+          },
+        },
+      },
     ],
   },
 };
