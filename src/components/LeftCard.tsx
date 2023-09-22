@@ -27,8 +27,8 @@ export const LeftCard = () => {
               paddingTop:"20px"
             }}
           >
-            <div>
-              <a className="link_footer" href="/" target="_blank">
+            <div style={{position:'relative'}}>
+              <a className="link_footer" href="https://gitee.com/enterprises?from=login" target="_blank">
                 <span className="footer_gitee">Gitee 企业版 </span>
                 <span style={{margin:"0 14px"}}>-</span>
                 <span>企业级 DevOps 研发管理平台</span>

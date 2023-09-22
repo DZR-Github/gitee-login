@@ -219,23 +219,6 @@ body {
   background-color: #f38d30 !important;
 }
 
-:where(.css-dev-only-do-not-override-1vr7spz).ant-checkbox-checked
-  .ant-checkbox-inner {
-  background-color: #fe7300 !important;
-  border-color: #fe7300 !important;
-}
-
-:where(.css-dev-only-do-not-override-1vr7spz).ant-checkbox-wrapper:not(
-    .ant-checkbox-wrapper-disabled
-  ):hover
-  .ant-checkbox-inner,
-:where(.css-dev-only-do-not-override-1vr7spz).ant-checkbox:not(
-    .ant-checkbox-disabled
-  ):hover
-  .ant-checkbox-inner {
-  border-color: #fe7300;
-}
-
 .login-message,
 .login-forgot {
   display: inline-block;
@@ -277,29 +260,13 @@ body {
   /* color: #d95c5c; */
 }
 
-.login-input-phone:focus {
-  border-color: #fe730080 !important;
-  box-shadow: none !important;
-}
-
 .login-input-password {
-}
-
-:where(.css-dev-only-do-not-override-1vr7spz).ant-input:focus,
-:where(.css-dev-only-do-not-override-1vr7spz).ant-input-focused {
-  border-color: rgba(254, 115, 0, 0.5) !important;
-  box-shadow: none;
-  outline: 0;
-}
-
-:where(.css-dev-only-do-not-override-1vr7spz).ant-input:hover,
-.login-input-phone:hover {
-  border-color: rgb(181, 181, 181);
 }
 
 .login-footer-icons {
   width: 35px;
   display: inline-block;
+  cursor: pointer;
 }
 
 .footer {
@@ -381,8 +348,7 @@ body {
 .signup-input-name,
 .signup-input-phone,
 .signup-input-password,
-.signup-input-location,
-.signup-input-static {
+.signup-input-location{
   padding-top: 0.64286em;
   padding-bottom: 0.64286em;
   line-height: 1.42858rem;
@@ -390,27 +356,22 @@ body {
   border-radius: 3px;
 }
 
-:where(.css-dev-only-do-not-override-1vr7spz).ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
-  border-color: rgb(181, 181, 181);
-  z-index: 1;
-}
-
-:where(.css-dev-only-do-not-override-1vr7spz).ant-input-affix-wrapper:focus, :where(.css-dev-only-do-not-override-1vr7spz).ant-input-affix-wrapper-focused {
-  border-color: #fe730080 !important;
-  box-shadow: none !important;
-  outline: 0;
-}
-
 .signup-input-location {
-  width: 55%;
   border-radius: 0 3px 3px 0;
 }
 
 .signup-input-static{
-  width: 45%;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
   color: gray;
   border-radius: 3px 0 0 3px;
   background-color: #f9f9f9;
+  display: inline-block;
+  border: 1px solid lightgray;
+  padding: 0.64286em 0;
+  line-height: 1.42858rem;
+  font-size: 1rem;
 }
 
 .signup-btn {
@@ -422,4 +383,16 @@ body {
 
 .signup-btn:hover {
   background-color: #f38d30 !important;
+}
+
+.inner_icons{
+  border-radius: 100%;
+  margin-left: 12px;
+}
+
+.inner_icons_container{
+  padding: 6px 10px; 
+  display: flex;
+  flex-wrap: wrap; 
+  width: 200px;
 }

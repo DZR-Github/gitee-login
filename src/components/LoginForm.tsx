@@ -1,6 +1,8 @@
 import React from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Checkbox, Form, Input ,ConfigProvider} from "antd";
+
+
 
 export const LoginForm:React.FC = () => {
     const onFinish = (values: any) => {
@@ -8,6 +10,21 @@ export const LoginForm:React.FC = () => {
     };
   
     return (
+      <ConfigProvider
+      theme={{
+        components:{
+          Input:{
+            activeBorderColor:"#fe730080",
+            hoverBorderColor:"rgb(181, 181, 181)",activeShadow:"none"
+          },
+          Checkbox:{
+            colorPrimary:"#fe7300",
+            colorBgBase:"#fe7300",
+            colorPrimaryHover:'#fe7300'
+          }
+        }
+      }}
+      >
       <Form
         name="normal_login"
         className="login-form"
@@ -16,7 +33,13 @@ export const LoginForm:React.FC = () => {
       >
         <Form.Item
           name="username"
-          rules={[{ required: true, message: "用户名为必填项" }]}
+          validateTrigger={["onChange","onBlur"]}
+          rules={[
+            { 
+            required: true, 
+            message: "用户名为必填项" 
+          }
+        ]}
         >
           <Input className="login-input-phone"
             placeholder="手机 / 邮箱 / 个人空间地址"
@@ -24,7 +47,7 @@ export const LoginForm:React.FC = () => {
         </Form.Item>
         <Form.Item
           name="password"
-          rules={[{ required: true, message: "" }]}
+          rules={[{ required: false, message: "" }]}
         >
           <Input
           className="login-input-password"
@@ -50,5 +73,6 @@ export const LoginForm:React.FC = () => {
           <a className="login-forgot" href="">已有账号，忘记密码？</a>
         </Form.Item>
       </Form>
+      </ConfigProvider>
     );
   };
